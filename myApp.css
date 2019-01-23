@@ -1,0 +1,72 @@
+.pageHeader{
+	font-family: verdana;
+	font-size: 30px;
+	font-weight: bold;
+	font-style: italic;
+	color: white;
+	background-color: #564d7c;
+	padding: 25px;
+}
+
+#subtitle{
+	font-size: 18px;
+}
+.buttons{
+	background-color: linen;
+	border: solid 2px #000000;
+	font-family: verdana;
+	color: #402784;
+	font-size: 20px;
+	box-shadow: 5px 10px #888888;
+	text-align: center;
+	padding: 20px;
+	margin-left: 25%;
+	margin-right: 25%;
+
+}
+
+a:link{
+	color: #402784;
+	text-decoration: none;
+}
+.buttons:hover{
+	background-color: #dddcf7;
+	font-style: italic;
+}
+
+#catPic1{
+	width: 100px;
+	height: 100px;
+	float: right;
+}
+/* Create two equal columns that float next to each other */
+.column1 {
+  background-color: #b5b2e8;
+  border-left: solid black 2px;
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: 950px;
+  text-align: center;
+  font-family: verdana;
+  font-size: 25px; 
+}
+
+.column2 {
+  background-color: #bcd6d8;
+  border-left: white solid 50px;
+  float: left;
+  width: 65%;
+  padding: 10px;
+  height: 900px;
+  text-align: center;
+  font-family: verdana;
+  font-size: 25px; 
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
