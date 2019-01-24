@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My First Solo React Component</title>
+  <link rel="stylesheet" type="text/css" href="myApp.css">
+</head>
+<body>
+  <h1 class="pageHeader">Some Two Column Practice <img id="catPic1" src="https://cdn.pixabay.com/photo/2016/07/10/21/47/cat-1508613_1280.jpg"><p id="subtitle">And Some Practice with React</p></h1>
+    <div class="row">
+      <div class="column1">
+        <h3>This is the First Column</h3>
+          <div class="buttons" id="buttonOne"></div>
+          <div class="buttons" id="buttonTwo"></div>
+          <div class="buttons" id="buttonThree"></div>
+          <a href="poems.html"><div class="buttons" id="buttonFour"></div></a>
+          <div class="buttons" id="buttonFive"></div>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js">
+          </script>
+          <!-- React -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
+          <!-- ReactDOM -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+          <!-- Babel -->
+          <script type="text/babel">
+          class ButtonName extends React.Component{
+          render(){
+          return(
+          <div>
+            <h4>{this.props.buttonName}</h4>
+          </div>
+          );
+        }
+      }
+
+
+      class Counter extends React.Component{
+      constructor(props){
+      super(props);
+      this.state={
+        number: 1
+      }
+    }
+      render(){
+        return(
+          <div>
+            <img src={this.props.image} alt="Bloc Logo"/>
+            <h2>Current program: {this.props.label}</h2>
+            <h3>Current week: {this.state.number}</h3>
+            <p>Current Date {this.props.date.toLocaleDateString()}</p>
+          </div>
+        );
+      }
+    }
+
+    const info = {
+      date: new Date(),
+      image: 'https://avatars0.githubusercontent.com/u/1441485?v=4&s=280',
+     }
+
+     Counter.defaultProps = {
+       label: "Web Developer Track"
+      }
+
+  ReactDOM.render(<ButtonName buttonName="Home" />, document.getElementById('buttonOne')
+  );
+  ReactDOM.render(<ButtonName buttonName="About" />, document.getElementById('buttonTwo')
+  );
+  ReactDOM.render(<ButtonName buttonName="Services" />, document.getElementById('buttonThree')
+  );
+  ReactDOM.render(<ButtonName buttonName="Poems" />, document.getElementById('buttonFour')
+  );
+  ReactDOM.render(<ButtonName buttonName="And more!" />, document.getElementById('buttonFive')
+  ); 
+  ReactDOM.render(
+  <Counter
+    date={info.date}
+    image={info.image}/>, document.getElementById("app")
+    );
+     
+     </script>
+   </div>
+  <div class="column2">
+    <h3>And This is the Second One</h3>
+    <p>I wonder if I could make this input do something interesting?</p>
+    <div>
+      <form>
+        <input type="text" placeholder="I don't know!">
+        <input type="Submit">
+      </form>
+    </div>
+    <div id="app"></div>
+      </div>
+     </div>
+  </body>
+</html>

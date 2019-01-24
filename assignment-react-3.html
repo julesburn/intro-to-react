@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My First Solo React Component</title>
+  <link rel="stylesheet" type="text/css" href="myApp.css">
+</head>
+<body>
+  <h1 class="pageHeader">Some Two Column Practice <img id="catPic1" src="https://cdn.pixabay.com/photo/2016/07/10/21/47/cat-1508613_1280.jpg"><p id="subtitle">And Some Practice with React</p></h1>
+    <div class="row">
+      <div class="column1">
+        <h3>This is the First Column</h3>
+          <div class="buttons" id="buttonOne"></div>
+          <p></p> 
+          <div class="buttons" id="buttonTwo"></div>
+          <p></p>
+          <div class="buttons" id="buttonThree"></div>
+          <p></p>
+          <a href="poems.html"><div class="buttons" id="buttonFour"></div></a>
+          <p></p>
+          <div class="buttons" id="buttonFive"></div>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+          <script type="text/babel">
+          class ButtonName extends React.Component{
+          render(){
+          return(
+          <div>
+            <h4>{this.props.buttonName}</h4>
+          </div>
+          );
+        }
+      }
+  ReactDOM.render(<ButtonName buttonName="Home" />, document.getElementById('buttonOne')
+  );
+  ReactDOM.render(<ButtonName buttonName="About" />, document.getElementById('buttonTwo')
+  );
+  ReactDOM.render(<ButtonName buttonName="Services" />, document.getElementById('buttonThree')
+  );
+  ReactDOM.render(<ButtonName buttonName="Poems" />, document.getElementById('buttonFour')
+  );
+  ReactDOM.render(<ButtonName buttonName="And more!" />, document.getElementById('buttonFive')
+  );
+     </script>
+   </div>
+  <div class="column2">
+    <h3>And This is the Second One</h3>
+    <p>I wonder if I could make this input do something interesting?</p>
+    <div>
+      <form>
+        <input type="text" placeholder="I don't know!">
+        <input type="Submit">
+    </div>
+    <p style="padding: 50px"></p>
+    <div><img src="https://as1.ftcdn.net/jpg/01/85/67/66/500_F_185676689_ajbzefdVIO2qe87xc8SaI84g9VcozUcP.jpg"></div>
+  </div>
+</body>
+</html>
